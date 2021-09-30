@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+}
+
+#imgwrapper {
+  background: url(background.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+a {
+  color: white;
+  text-align: center;
+}
+
+#navbar {
+  width: 100%;
+}
+#navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+#navbar ul a {
+  display: block;
+  padding: 2px;
+  text-decoration: none;
+}
+#navbar .menu {
+  clear: both;
+  max-height: 0;
+  transition: 0.2s ease-out;
+}
+#navbar .menu-icon {
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+}
+#navbar .menu-icon .nav-icon {
+  background-color: white;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+#navbar .menu-icon .nav-icon:before {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: 5px;
+}
+#navbar .menu-icon .nav-icon::after {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: -5px;
+}
+#navbar .menu-btn {
+  display: none;
+}
+#navbar .menu-btn:checked ~ .menu {
+  max-height: 240px;
+  background-color: rgba(129, 129, 133, 0.705);
+}
+#navbar .menu-btn:checked ~ .menu-icon .nav-icon {
+  background-color: transparent;
+}
+#navbar .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+#navbar .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+#mainwrapper {
+  height: 100vh;
+}
+#mainwrapper #main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+#mainwrapper #main .textdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#mainwrapper #main .textdiv h1 {
+  padding-top: 50px;
+}
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+}
+.arrow img {
+  border-radius: 50%;
+  height: 40px;
+}
+
+#articlewrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  gap: 20px;
+}
+#articlewrapper #article {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#articlewrapper #article .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#articlewrapper #article .profile .profileimg {
+  width: 230px;
+}
+#articlewrapper #article .profile .profileimg img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(129, 129, 133, 0.705), 0 6px 20px 0 rgba(129, 129, 133, 0.705);
+}
+
+.profile .textbox {
+  height: auto;
+  width: 100%;
+  background-color: #eeeeee;
+  border-radius: 7%;
+  margin-top: 20px;
+}
+.profile .textbox p {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.arrow2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-end;
+  height: 100%;
+}
+.arrow2 img {
+  border-radius: 50%;
+  height: 40px;
+  padding-bottom: 50px;
+}
+
+#footerwrapper {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#footerwrapper #footer {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+#footerwrapper #footer .col {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+#footerwrapper #footer .col p {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navwrapper {
+    background-color: rgba(129, 129, 133, 0.705);
+    height: 60px;
+  }
+  #navwrapper #navbar li {
+    float: left;
+  }
+  #navwrapper #navbar li a {
+    padding: 20px 30px;
+  }
+  #navwrapper #navbar .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  #navwrapper #navbar .menu-icon {
+    display: none;
+  }
+
+  #main .textdiv {
+    height: 75%;
+  }
+
+  #article {
+    display: flex;
+    flex-direction: column;
+  }
+  #article .row1 {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+  }
+  #article .row1 .textbox {
+    width: 350px;
+  }
+  #article .row2 {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+  }
+  #article .row2 .textbox {
+    width: 350px;
+  }
+
+  #footerwrapper {
+    display: flex;
+  }
+  #footerwrapper #footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 85%;
+  }
+  #footerwrapper #footer .col {
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=sofia.css.map */
