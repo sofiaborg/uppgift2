@@ -1,13 +1,14 @@
 $maincolor:white;
 $transition: .2s ease-out;
-$transcolor: rgba(129, 129, 133, 0.705);
+$transcolor: rgba(194, 194, 201, 0.199);
 
-body {
+head body {
+    font-size: 12pt;
     margin:0;
 }
 
 #imgwrapper {
-background: url(background.jpg) no-repeat center center fixed; 
+background: url(../background.jpg) no-repeat center center fixed; 
 background-size: cover;
 }
 
@@ -100,88 +101,85 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 80%;
+        height: 99%;
         .textdiv {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             color:$maincolor;
-        h1 {
-            padding-top: 50px;
+        h2 {
+            padding-top: 150px;
+        }
+        p {
+            font-size: 1em;            
+        }
+        .arrow i {
+            margin-top: 180px;
+            font-size: 2em;
         }
     }
 
 }
 }
 
-// Få in nedan i ovan nästling!
-.arrow {
-    display: flex;
-    flex-direction: column;
-    img {
-        border-radius: 50%;
-        height:40px;
-    }
+#about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $maincolor;
+	column-gap: 20px;
+	#article {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.profile {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.profileimg {
+				width: 270px;
+				img {
+					width: 100%;
+					border-radius: 50%;
+					box-shadow: 0 4px 8px 0 rgba(173, 171, 171, 0.685), 0 6px 20px 0 rgba(173, 171, 171, 0.685);
+				}
+			}
+			.textbox {
+				height: auto;
+				width: 330px;
+				background-color: rgb(228, 222, 222);
+				border-radius: 10px;
+				margin-top: 20px;
+				p {
+					font-size: 0.8em;
+					padding: 25px;
+					i {
+						font-size: 2em;
+						padding: 2px;
+					}
+				}
+			}
+		}
+		.arrow2 i{
+			font-size: 25pt;
+            color:black;
+		}
+	}
 }
 
 
-#articlewrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $maincolor;
-    gap: 20px;
-    #article {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .profile {
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            .profileimg {
-                width: 230px;
-                img {
-                    width: 100%;
-                    border-radius: 50%;
-                    box-shadow: 0 4px 8px 0 $transcolor, 0 6px 20px 0 $transcolor;
-            }
-        }
-    }
 
-}
+
+
+#about > .arrow2 > a > .i {
+    font-size: 2em;
+    color:black;
+    margin-bottom: 30px;
 }
 
-// Få in nedan del i ovan nästling!
-.profile .textbox {
-height:auto;
-width: 100%;
-background-color: rgb(238, 238, 238);
-border-radius: 7%;
-margin-top: 20px;
-p {
-    padding:10px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-}
-
-.arrow2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: flex-end;
-    height:100%;
-    img {
-        border-radius: 50%;
-        height:40px;
-        padding-bottom: 50px;;
-}
-}
-
-#footerwrapper {
+#contact {
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -189,12 +187,16 @@ p {
     #footer {
         display: flex;
         flex-direction: column;
-        width: 25%;
+        width: 40%;
         .col {
             margin-top: 5px;
             margin-bottom: 20px;
         p {
+            font-size: 1.1em;
         color:$maincolor;
+        i {
+            margin-right: 15px;
+        }
         }
     }
 }
@@ -207,12 +209,15 @@ p {
     flex-direction: column;
     align-items: center;
 }
-#navwrapper {
+#home {
     background-color: $transcolor;
     height:60px;
     #navbar {
         li {
             float: left;
+            a:hover {
+                    text-decoration: underline;
+            }
             a {
                 padding: 20px 30px;
             }
@@ -256,7 +261,7 @@ p {
 }
 
 
-#footerwrapper {
+#contact {
     display: flex;
     #footer {
      display: flex;

@@ -3,7 +3,7 @@ body {
 }
 
 #imgwrapper {
-  background: url(background.jpg) no-repeat center center fixed;
+  background: url(./background.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -252,4 +252,4 @@ a {
   }
 }
 
-/*# sourceMappingURL=sofia.css.map */
+/*# sourceMappingURL=main.css.map */
